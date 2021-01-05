@@ -38,6 +38,23 @@ public class Configuration {
     public String getUrl() {
         return getProperty("url");
     }
+    
+    public String getTitle() {
+        return getProperty("title");
+    }
+    
+    public String getName() {
+        return getProperty("Name");
+    }
+    
+    public String getEmail() {
+        return getProperty("Email");
+    }
+    
+    public String getPhoneNumber() {
+        return getProperty("Phone");
+    }
+    
     public String getProperty(String propertyName) {
         return configProperties.getProperty(propertyName);
     }
