@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.sample.test.demo.HomePage;
 import com.sample.test.demo.TestBase;
@@ -14,7 +15,6 @@ public class FeaturesNeg extends TestBase {
 
 	
 	HomePage homePage;
-	
 	
 	public FeaturesNeg() {
 		super();
@@ -92,9 +92,10 @@ public class FeaturesNeg extends TestBase {
     	Thread.sleep(4000);
     	String modal = homePage.verifyMissingDialog().getText();
     	if (modal.contains("Missing")) {
-    		System.out.println("modal dialog appeared with error message");
     		homePage.verifyDialogClose().click();
     		Thread.sleep(3000);
+    		markFail("modal dialog appeared with error message");
+
     		
     	} 
     

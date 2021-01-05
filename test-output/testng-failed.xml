@@ -6,6 +6,7 @@
       <class name="com.sample.tests.FeaturesNeg">
         <methods>
           <include name="init"/>
+          <include name="OrderWithMissingInfo"/>
           <include name="Title"/>
           <include name="setUp"/>
           <include name="tearDown"/>

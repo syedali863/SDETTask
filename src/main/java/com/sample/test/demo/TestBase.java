@@ -98,9 +98,9 @@ public class TestBase {
 		}
 	}
     
-    public static void markFail(){
-    	System.out.println("Test FAIL.."+"\n");
-		Assert.assertTrue(false);
+    public static void markFail(String message){
+		System.out.println("Script FAIL.."+message);
+		Assert.assertTrue(false, message);
 	}
     
 	
